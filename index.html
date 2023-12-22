@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Entry Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url(https://cdn.wallpapersafari.com/55/83/Pl6QHc.jpg);
+            background-size:cover;
+            background-repeat: no-repeat;
+            
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .dialog-box {
+            border-radius: 8px;
+            box-shadow: 0 0 66px 38px rgba(0, 0, 0, 1.2);
+            overflow: hidden;
+            width: 300px;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #00fff1;
+            font-size: 24px;
+            font-style: italic;
+            font-weight: 800;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 40px;
+            font-size: 14px;
+            margin-bottom: 6px;
+            background-color: #5e646d;
+        }
+
+        button {
+            background-color: #5e646d;
+            color: #fff;
+            border: none;
+            padding: 12px 15px;
+            cursor: pointer;
+            border-radius: 40px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+
+        }
+
+        button:hover {
+            background-color: #3c78d8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="dialog-box">
+        <label for="code" ><b>Enter the code</b></label>
+        <input type="password" id="code" placeholder="Code">
+        <button onclick="checkCode()">Submit</button>
+    </div>
+</div>
+
+<script>
+    function checkCode() {
+        var enteredCode = document.getElementById('code').value;
+        var correctCode = 'IMAGES@IARE';
+
+        if (enteredCode === correctCode) {
+            window.location.href = 'target.html';
+        } else {
+            alert('Incorrect code. Please try again.');
+        }
+    }
+</script>
+
+</body>
+</html>
+
+
+
